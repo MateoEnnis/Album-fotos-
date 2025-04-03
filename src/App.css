@@ -1,0 +1,200 @@
+/* Estructura base para ocupar toda la pantalla */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Estructura principal del contenido */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header personalizado */
+
+.navbar-custom {
+  background-color: #f5f5f5;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #3c5233;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .dropdown-toggle {
+  color: #3c5233;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .dropdown-item:hover {
+  color: #6a994e;
+}
+
+.navbar-custom .dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+/* Presentación */
+
+.presentacion-section {
+  padding: 3rem 0;
+  background-color: #ffffff;
+}
+
+.presentacion-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid #3c5233;
+}
+
+.presentacion-text h2 {
+  color: #3c5233;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.presentacion-text p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Galería destacada */
+
+.galeria-section {
+  background-color: #f8f8f8;
+  padding: 3rem 0;
+}
+
+.galeria-titulo {
+  color: #3c5233;
+  font-weight: bold;
+}
+
+.galeria-img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón "Ver más viajes" */
+
+.btn-ver-mas {
+  background-color: #3c5233;
+  color: white;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  background-color: #6a994e;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Ciudades */
+
+.ciudades-section {
+  background-color: #ffffff;
+  padding: 3rem 0;
+}
+
+.ciudades-titulo {
+  color: #3c5233;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.ciudad-card {
+  border: none;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+}
+
+.ciudad-card:hover {
+  transform: translateY(-5px);
+}
+
+.ciudad-img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Footer */
+
+.footer-section {
+  background-color: #3c5233;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-text {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #b7e4c7;
+  text-decoration: underline;
+}
+
+/* Animación fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Efecto hover para las tarjetas */
+.ciudad-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto hover para el botón "Ver más viajes" */
+.btn-ver-mas:hover {
+  background-color: #6a994e;
+  color: #fff;
+  cursor: pointer;
+}
