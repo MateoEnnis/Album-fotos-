@@ -7,45 +7,21 @@ import bonifacio from '../assets/bonifacio.jpg';
 
 const Ciudades = () => {
   return (
-    <section className="ciudades-section">
+    <section className="ciudades-section fade-in">
       <Container>
         <h3 className="text-center ciudades-titulo">Ciudades que visitamos ✈️</h3>
         <Row className="mt-4">
-          <Col md={6} className="mb-4">
-            <Card className="ciudad-card">
-              <Card.Img variant="top" src={paris} className="ciudad-img" />
-              <Card.Body>
-                <Card.Title className="text-center">París</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col md={6} className="mb-4">
-            <Card className="ciudad-card">
-              <Card.Img variant="top" src={lyon} className="ciudad-img" />
-              <Card.Body>
-                <Card.Title className="text-center">Lyon</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col md={6} className="mb-4">
-            <Card className="ciudad-card">
-              <Card.Img variant="top" src={dijon} className="ciudad-img" />
-              <Card.Body>
-                <Card.Title className="text-center">Dijon</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col md={6} className="mb-4">
-            <Card className="ciudad-card">
-              <Card.Img variant="top" src={bonifacio} className="ciudad-img" />
-              <Card.Body>
-                <Card.Title className="text-center">Bonifacio</Card.Title>
-              </Card.Body>
-            </Card>
-          </Col>
+          {[{ nombre: "París", img: paris }, { nombre: "Lyon", img: lyon }, { nombre: "Dijon", img: dijon }, { nombre: "Bonifacio", img: bonifacio }]
+            .map((ciudad, i) => (
+              <Col md={6} className="mb-4" key={i}>
+                <Card className="ciudad-card fade-in">
+                  <Card.Img variant="top" src={ciudad.img} className="ciudad-img" />
+                  <Card.Body>
+                    <Card.Title className="text-center">{ciudad.nombre}</Card.Title>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
         </Row>
       </Container>
     </section>

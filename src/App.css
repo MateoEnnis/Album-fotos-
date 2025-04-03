@@ -1,5 +1,4 @@
 /* Estructura base para ocupar toda la pantalla */
-
 html, body, #root {
   height: 100%;
   margin: 0;
@@ -26,7 +25,6 @@ body {
 }
 
 /* Header personalizado */
-
 .navbar-custom {
   background-color: #f5f5f5;
   padding: 1rem 2rem;
@@ -57,7 +55,6 @@ body {
 }
 
 /* Presentación */
-
 .presentacion-section {
   padding: 3rem 0;
   background-color: #ffffff;
@@ -68,6 +65,11 @@ body {
   height: 200px;
   object-fit: cover;
   border: 4px solid #3c5233;
+  transition: transform 0.3s ease;
+}
+
+.presentacion-img:hover {
+  transform: scale(1.05);
 }
 
 .presentacion-text h2 {
@@ -83,7 +85,6 @@ body {
 }
 
 /* Galería destacada */
-
 .galeria-section {
   background-color: #f8f8f8;
   padding: 3rem 0;
@@ -97,10 +98,14 @@ body {
 .galeria-img {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.galeria-img:hover {
+  transform: scale(1.05);
 }
 
 /* Botón "Ver más viajes" */
-
 .btn-ver-mas {
   background-color: #3c5233;
   color: white;
@@ -108,17 +113,16 @@ body {
   padding: 0.6rem 1.5rem;
   border-radius: 8px;
   border: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-ver-mas:hover {
   background-color: #6a994e;
   color: #fff;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Ciudades */
-
 .ciudades-section {
   background-color: #ffffff;
   padding: 3rem 0;
@@ -132,13 +136,14 @@ body {
 
 .ciudad-card {
   border: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
 }
 
 .ciudad-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .ciudad-img {
@@ -146,10 +151,14 @@ body {
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.ciudad-img:hover {
+  transform: scale(1.03);
 }
 
 /* Footer */
-
 .footer-section {
   background-color: #3c5233;
   color: white;
@@ -184,17 +193,4 @@ body {
   to {
     opacity: 1;
   }
-}
-
-/* Efecto hover para las tarjetas */
-.ciudad-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* Efecto hover para el botón "Ver más viajes" */
-.btn-ver-mas:hover {
-  background-color: #6a994e;
-  color: #fff;
-  cursor: pointer;
 }

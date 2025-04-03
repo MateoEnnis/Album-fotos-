@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import fotoCandeMateo from '../assets/cande-mateo.jpg'; // ✅ Importación correcta
+import fotoCandeMateo from '../assets/cande-mateo.jpg';
 
 const Presentacion = () => {
   return (
-    <section className="presentacion-section">
+    <section className="presentacion-section fade-in">
       <Container>
         <Row className="align-items-center">
           <Col md={4} className="text-center">

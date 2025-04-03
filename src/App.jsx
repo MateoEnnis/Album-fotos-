@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="main-wrapper">
+    <div className="main-wrapper fade-in">
       <Header />
       <Presentacion />
       <GaleriaDestacada />

@@ -6,22 +6,17 @@ import destacada03 from '../assets/destacada03.jpg';
 
 const GaleriaDestacada = () => {
   return (
-    <section className="galeria-section">
+    <section className="galeria-section fade-in">
       <Container>
         <h3 className="text-center galeria-titulo">Fotos destacadas del último viaje 📍</h3>
         <Row className="mt-4">
-          <Col md={4} className="mb-3">
-            <Image src={destacada01} fluid className="galeria-img" />
-          </Col>
-          <Col md={4} className="mb-3">
-            <Image src={destacada02} fluid className="galeria-img" />
-          </Col>
-          <Col md={4} className="mb-3">
-            <Image src={destacada03} fluid className="galeria-img" />
-          </Col>
+          {[destacada01, destacada02, destacada03].map((img, i) => (
+            <Col md={4} className="mb-3" key={i}>
+              <Image src={img} fluid className="galeria-img" />
+            </Col>
+          ))}
         </Row>
 
-        {/* Botón centrado */}
         <div className="text-center mt-4">
           <Button className="btn-ver-mas" href="/todas">
             Ver más viajes
